@@ -1,0 +1,4 @@
+language: python
+python: 3.5
+install: pip install tox
+script: tox -e lint,py26,py27,pypy,pypy3,py33,py34,py35
