@@ -1,4 +1,5 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-from pogotransfercalc.calculate import calculate
+from .calculate import calculate
+#from .cost import cost

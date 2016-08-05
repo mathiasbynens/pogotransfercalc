@@ -15,6 +15,12 @@ $ pip install terminaltables
 ```py
 from pogotransfercalc import calculate
 
+result = calculate(pokemon_count=11, candy_count=390, pokedex_number=129)
+print result
+# → {'evolutions': 1, 'transfers': 10}
+
+# Instead of `pokedex_number`, you can pass in the amount of required
+# candies directly using `evolution_cost`:
 result = calculate(pokemon_count=40, candy_count=288, evolution_cost=12)
 print result
 # → {'evolutions': 27, 'transfers': 10}

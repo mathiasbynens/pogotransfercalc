@@ -1,11 +1,19 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+from .cost import cost
+
 def calculate(
-	pokemon_count=0, candy_count=0, evolution_cost=12, transfer_after_evolving=False):
+	pokemon_count=0, candy_count=0,
+	pokedex_number=0, evolution_cost=12,
+	transfer_after_evolving=False):
+
 	candies_gained_on_evolution = 1
-	if (transfer_after_evolving):
+	if transfer_after_evolving:
 		candies_gained_on_evolution = 2
+
+	if pokedex_number:
+		evolution_cost = cost[pokedex_number]
 
 	evolution_count = 0
 	transfer_count = 0
