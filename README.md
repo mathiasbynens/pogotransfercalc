@@ -7,7 +7,7 @@ _pogotransfercalc_ makes it easy to calculate how many Pokémon you should trans
 Using [pip](https://pip.pypa.io/):
 
 ```sh
-$ pip install terminaltables
+$ pip install pogotransfercalc
 ```
 
 ## Usage
