@@ -13,7 +13,13 @@ def calculate(
 		candies_gained_on_evolution = 2
 
 	if pokedex_number:
-		evolution_cost = cost[pokedex_number]
+		if pokedex_number in cost:
+			evolution_cost = cost[pokedex_number]
+		else:
+			return {
+				'transfers': 0,
+				'evolutions': 0
+			}
 
 	evolution_count = 0
 	transfer_count = 0

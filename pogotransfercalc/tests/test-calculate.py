@@ -40,3 +40,8 @@ class TestCalculation(TestCase):
 		result = calculate(pokemon_count=2, candy_count=11, pokedex_number=10)
 		self.assertEqual(result['transfers'], 1)
 		self.assertEqual(result['evolutions'], 1)
+
+	def test_scenario_7(self):
+		result = calculate(pokemon_count=2, candy_count=999, pokedex_number=3)
+		self.assertEqual(result['transfers'], 0)
+		self.assertEqual(result['evolutions'], 0)
