@@ -28,7 +28,7 @@ def calculate(
 	# evolved Pokémon.
 	while True:
 		# Break when there aren’t enough Pokémon or candies.
-		if candy_count / evolution_cost == 0 or pokemon_count == 0:
+		if candy_count // evolution_cost == 0 or pokemon_count == 0:
 			break
 		else:
 			# Evolve a Pokémon.

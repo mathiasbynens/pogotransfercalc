@@ -1,4 +1,19 @@
 language: python
-python: 3.5
+python:
+  - '2.6'
+  - '2.7'
+  - '3.2'
+  - '3.3'
+  - '3.4'
+  - '3.5'
+  - '3.6-dev'
+  - 'nightly'
+matrix:
+  fast_finish: true
+  allow_failures:
+    # `pip install` fails on Python 3.2: https://github.com/pypa/pip/issues/3390
+    - python: '3.2'
 install: pip install tox
-script: tox -e lint,py26,py27,pypy,pypy3,py33,py34,py35
+script:
+  - tox -e lint
+  - python setup.py test
